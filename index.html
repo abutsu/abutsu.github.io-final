@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Snake</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+
+    <link href="https://fonts.googleapis.com/css?family=Noto+Sans+TC|Noto+Serif+TC&display=swap" rel="stylesheet">
+
+    <link href="https://code.jquery.com/ui/1.10.4/themes/ui-lightness/jquery-ui.css" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+    <script src="https://code.jquery.com/ui/1.10.4/jquery-ui.js"></script>
+
+
+    <link rel="stylesheet" href="./css/new.css">
+
+    <!--<link rel="stylesheet" type="text/css" href="style.css">-->
+</head>
+
+<body onload="snake_game()" bgcolor="#6495ed">
+    <h2 class="headline">Snake</h2>
+
+    <div id="new_game_dialog" class="dialog_new" title="GAME OVER!!"></div>
+
+    <table>
+        <tr>
+            <td>
+                <p class="score">Score: <span id="score_value">0</span></p>
+                <button class="buttons" id="new_game">New Game</button>
+            </td>
+        </tr>
+
+        <tr>
+            <td>
+                <p class="score">Best Score: <span id="best_score_value">0</span></p>
+                <button class="buttons" id="nb">No Boundary</button>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <form id="frm1"></form>
+                <input type="value" id="wd" value="800"> x <input type="value" id="hg" value="400">
+                <input type="button" onclick="myFunction()" value="New Frame" id="whh">
+                </form>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <article align="center">
+                    <canvas align="center" style="position: center" id="gameArea" class="wrap" width="800" height="400" tabindex="1"></canvas>
+                </article>
+            </td>
+            <td>
+                <table>
+                    <tr>
+                        <td>
+                            <label id="speed_label">10</label>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <input id="speed_setter" type="range" orient="vertical" value="10" min="5" max="100" />
+                        </td>
+                    </tr>
+                </table>
+            </td>
+        </tr>
+
+    </table>
+
+    <script src="./js/new.js"></script>
+</body>
+
+</html>
